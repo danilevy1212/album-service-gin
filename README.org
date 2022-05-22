@@ -1,0 +1,29 @@
+#+title: README
+
+A CRUD API for storing Albums. DDBB is in-memory. A toy project to get familiar with =GIN= and ~golang~.
+
+* Methods
+
+- ~GET _/albums~ :: Get a list of all albums, returned as JSON.
+
+- ~POST _/albums~ :: Add a new album from request data sent as JSON.
+
+- ~GET _/albums/:id~ :: Get an album by its ID, returning the album data as JSON.
+
+- ~DELETE _/albums/:id~ :: Delete an album from the DDBB
+
+- ~PATCH _/albums/:id~ :: Modify the details of an album.
+
+* Album DTO
+
+#+begin_src go
+type album struct {
+    ID     string  `json:"id"`
+    Title  string  `json:"title"`
+    Artist string  `json:"artist"`
+    Price  float64 `json:"price"`
+}
+#+end_src
+
+
+
